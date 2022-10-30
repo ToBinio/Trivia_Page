@@ -1,0 +1,106 @@
+
+hr{
+  margin-bottom: 0;
+}
+
+.quizPart {
+  margin: 20px 20px 0;
+  padding: 20px;
+  box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+
+  background-color: #603b7f;
+
+  transition: 1s;
+  animation: fadeIn 1s forwards;
+
+  h4 {
+    margin: 0;
+  }
+
+  p {
+    font-size: small;
+    margin-top: 0;
+  }
+
+  .buttons {
+    button {
+      margin: 0 10px;
+      background-color: #2f2442;
+
+      color: #fdf1f2;
+
+      padding: 5px 10px;
+      border-radius: 5px;
+
+      border: none;
+
+      transition: 0.2s ease-out;
+
+      box-shadow: 2px 3px 6px darken(#2f2442, 10%) inset;
+    }
+
+    button:hover {
+      margin: 0 6px;
+      padding: 5px 14px;
+
+      box-shadow: 2px 3px 6px darken(#2f2442, 15%) inset;
+
+      background-color: darken(#2f2442, 5%);
+    }
+
+    button.correct {
+      box-shadow: 2px 3px 6px darken(#783a8d, 10%) inset;
+
+      background-color: #783a8d;
+    }
+
+    button.correctChosen {
+      box-shadow: 2px 3px 6px darken(#c760bc, 10%) inset;
+
+      background-color: #c760bc;
+    }
+
+    button.incorrect {
+      box-shadow: 2px 3px 6px transparentize(#2f2442, 0.5) inset;
+
+      background-color: transparent;
+    }
+  }
+}
+
+.quizPart.finished {
+  animation: fadeOut 1s forwards;
+  animation-delay: 1s;
+
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+@keyframes fadeOut {
+  from {
+    max-height: 100px;
+    filter: opacity(1);
+  }
+
+  to {
+    max-height: 0;
+
+    padding-top: 0;
+    padding-bottom: 0;
+
+    margin-top: 0;
+
+    filter: opacity(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    filter: opacity(0);
+  }
+
+  to {
+    filter: opacity(1);
+  }
+}
