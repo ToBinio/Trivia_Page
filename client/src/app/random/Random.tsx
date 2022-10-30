@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import QuizPart, {QuizElement} from "../QuizPart";
 import Cookies from 'js-cookie'
+import "./Random.scss"
 
 function Random() {
 
@@ -10,6 +11,8 @@ function Random() {
     useEffect(() => {
         setData([])
 
+        addQuestion().then()
+        addQuestion().then()
         addQuestion().then()
         addQuestion().then()
         addQuestion().then()
@@ -49,9 +52,7 @@ function Random() {
 
     return (
         <div>
-            <h2>Random </h2>
-            <span><abbr
-                title="last 100 Questions">avg</abbr> {avg.toLocaleString(undefined, {maximumFractionDigits: 0})}%</span>
+            <h2>Random Trivia</h2>
             <hr/>
             {data.map((value) => <QuizPart value={value} key={value.question}/>)}
         </div>
