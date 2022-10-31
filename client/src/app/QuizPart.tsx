@@ -48,7 +48,7 @@ function QuizPart(props: myProps) {
             <div className={"buttons"}>
                 {possibleAnswers.map((value, index) =>
                     <button onClick={() => handleClick(value)} disabled={state !== State.PENDING}
-                            className={getClassName(value)} key={value}>{value}</button>)}
+                            className={getClassName(value)} key={value} dangerouslySetInnerHTML={{__html : value}}></button>)}
             </div>
         </div>
     )

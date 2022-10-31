@@ -52,8 +52,7 @@ function Random() {
 
     return (
         <div>
-            <h2>Random Trivia</h2>
-            <hr/>
+            <h1>Random Trivia</h1>
             {data.map((value) => <QuizPart value={value} key={value.question}/>)}
         </div>
     )
